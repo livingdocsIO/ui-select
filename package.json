@@ -1,13 +1,13 @@
 {
-  "name": "ui-select",
+  "name": "@nzz/ui-select",
   "main": "./index.js",
-  "author": "http://github.com/angular-ui/ui-select/graphs/contributors",
-  "homepage": "http://github.com/angular-ui/ui-select",
+  "author": "http://github.com/nzzdev/ui-select/graphs/contributors",
+  "homepage": "http://github.com/nzzdev/ui-select",
   "repository": {
-    "url": "git://github.com/angular-ui/ui-select.git"
+    "url": "git://github.com/nzzdev/ui-select.git"
   },
   "style": "dist/select.css",
-  "version": "0.19.8",
+  "version": "0.19.9",
   "devDependencies": {
     "angular": "^1.2.18",
     "angular-mocks": "^1.2.18",
@@ -51,6 +51,10 @@
   },
   "scripts": {
     "test": "gulp test"
+  },
+  "engines": {
+    "node": "6",
+    "npm": "^3.10.8"
   },
   "spm": {
     "main": "dist/select.js",
