@@ -1,13 +1,13 @@
 {
-  "name": "ui-select",
+  "name": "@livingdocs/ui-select",
   "main": "./index.js",
   "author": "http://github.com/angular-ui/ui-select/graphs/contributors",
   "homepage": "http://github.com/angular-ui/ui-select",
   "repository": {
-    "url": "git://github.com/angular-ui/ui-select.git"
+    "url": "git://github.com/livingdocsIO/ui-select.git"
   },
   "style": "dist/select.css",
-  "version": "0.19.8",
+  "version": "0.0.0-placeholder",
   "devDependencies": {
     "angular": "^1.2.18",
     "angular-mocks": "^1.2.18",
@@ -50,13 +50,18 @@
     "title-case": "^1.1.2"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "build": "gulp build"
   },
+  "main": "dist/select.min.js",
   "spm": {
-    "main": "dist/select.js",
+    "main": "dist/select.min.js",
     "output": [
       "dist/select.css"
     ]
+  },
+  "release": {
+    "extends": "@livingdocs/semantic-release-presets/npm-github"
   },
   "license": "MIT"
 }

@@ -1,0 +1,29 @@
+---
+kind: pipeline
+name: default
+
+clone:
+  depth: 50
+
+steps:
+- name: build
+  image: node:6
+  commands: ["npm install", "npm run build"]
+  environment:
+    NPM_CONFIG_LOGLEVEL: warn
+
+- name: release
+  image: livingdocs/semantic-release:v1.0.0
+  environment:
+    GH_TOKEN:
+      from_secret: GITHUB_TOKEN
+    NPM_TOKEN:
+      from_secret: NPM_TOKEN
+
+trigger:
+  event: [push]
+---
+kind: signature
+hmac: 14fb3b1a7a703d777ea9a25907b266e8408e97f9fdb7833e563c6c8b4791b0ae
+
+...
